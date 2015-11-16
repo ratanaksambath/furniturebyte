@@ -1,0 +1,22 @@
+checkout:
+  post:
+    - npm install jasmine
+dependencies:
+  pre:
+    - curl -s https://www.parse.com/downloads/cloud_code/installer.sh | sudo /bin/bash
+    - /bin/echo "${ACCOUNT_KEY}" | /usr/local/bin/parse configure accountkey -d
+    - npm install -g jasmine
+deployment:
+  production: # furniturebyte Parse project
+    branch: master
+    commands:
+      - sudo rm -R node_modules && sudo rm -R spec && sudo rm package.json
+      - parse deploy furniturebyte
+  staging: # gamekulturedev Parse project
+    branch: develop
+    commands:
+      - sudo rm -R node_modules && sudo rm -R spec && sudo rm package.json
+      - parse deploy gamekulturedev
+machine:
+  node:
+    version: 4.1.0

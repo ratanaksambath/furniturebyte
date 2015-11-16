@@ -1,0 +1,1015 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" xmlns:fb="http://ogp.me/ns/fb#"><!--<![endif]-->
+
+<head>
+  <!-- CONTENT-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35c53b4807","applicationID":"3987244","transactionName":"IF0PRxdYWw0DFxgKDQ5XTloLU1IZ","queueTime":0,"applicationTime":143,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-686.min.js"}</script>
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgEEU1VRGwAJXFZQAwU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=n(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c>f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document;t(2);var f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+  <meta name="keywords" content="Gaming, Games, XBOX, PlayStation, Wii, Table Top, Table Top Games, RPG, Role-playing, Role-playing Games, Board Games, Mobile, Mobile Games, War Games, Miniatures, Miniatures Games, GameKulture.com">
+  <meta name="description" content="GameKulture.com, a better way to find other gamers to play with."/>
+  <meta name="author" content="GameKultur, Inc." />
+  <meta name="copyright" content="GameKultur, Inc. Copyright (c) 2015" />
+  <meta property="og:site_name" content="GameKulture.com"/>
+  <meta content="noodp,noydir" name="robots"/>
+  <meta property="fb:app_id" content="1403661493190119" />
+  <meta property="fb:page_id" content="461182603926316" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="@gamekulture"/>
+  <meta property="twitter:creator" content="@gamekulture"/>
+  <meta property="og:title" content="GameKulture.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.gamekulture.com"/>
+  <meta property="og:description" content="GameKulture.com, a better way to find other gamers to play with."/>
+  <meta property="og:image" content="https://www.gamekulture.com/images/gk_icon.jpg"/>
+  <meta property="twitter:title" content="GameKulture.com"/>
+  <meta property="twitter:description" content="GameKulture.com, a better way to find other gamers to play with."/>
+  <meta property="twitter:image:src" content="https://www.gamekulture.com/images/gk_icon.jpg"/>
+  <meta name="apple-itunes-app" content="app-id=808325918">
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="on/8/ng25xTWdgnDe2b47lFrmXbmDa0IzBbKqUGe6W4=" name="csrf-token" />
+  <title>GameKulture</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="#">
+  <link rel="apple-touch-icon" sizes="72x72" href="#">
+  <link rel="apple-touch-icon" sizes="114x114" href="#">
+  <link rel="apple-touch-icon" sizes="144x144" href="#">
+
+  <!-- CSS -->
+  <link href="//gamekulturprod.s3.amazonaws.com/assets/application-07fc44c72ebce763e2000007c91b606a.css" media="screen" rel="stylesheet" type="text/css" />
+  <!-- END -->
+
+  <!-- Javascript -->
+  <script src="//gamekulturprod.s3.amazonaws.com/assets/application-e4ce57e8cf1b7b16ce11f1b06eafd83b.js" type="text/javascript"></script>
+  <!-- END -->
+
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="on/8/ng25xTWdgnDe2b47lFrmXbmDa0IzBbKqUGe6W4=" name="csrf-token" />
+  <title>GameKulture.com | Where gaming isn't a hobby, it's a kulture.</title>
+
+
+  <!--[if gte IE 9]>
+  <style type="text/css">
+    .header-wrap {
+      filter: none !important;
+    }
+  </style>
+  <![endif]-->
+
+  <script>
+  </script>
+
+
+  <!-- Google Analytics -->
+  <script async src='//www.google-analytics.com/analytics.js'></script>
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    ga('create', 'UA-60027242-1', {useBeacon: true});
+
+    ga('send', 'pageview');
+
+    (function ($) {
+      // Log all jQuery AJAX requests to Google Analytics
+      $(document).ajaxSend(function(event, xhr, settings){
+        ga('send','pageview',settings.url.pathname);
+      });
+    })(jQuery);
+
+    // Pure JavaScript errors handler
+    window.addEventListener('error', function (err) {
+      var lineAndColumnInfo = err.colno ? ' line:' + err.lineno +', column:'+ err.colno : ' line:' + err.lineno;
+      ga(
+              'send',
+              'event',
+              'JavaScript Error',
+              err.message,
+              err.filename + lineAndColumnInfo + ' -> ' +  navigator.userAgent,
+              0,
+              true
+      );
+    });
+
+    // jQuery errors handler (jQuery API)
+    jQuery.error = function (message) {
+      ga(
+              'send',
+              'event',
+              'jQuery Error',
+              message,
+              navigator.userAgent,
+              0,
+              true
+      );
+    }
+
+    // jQuery AJAX errors handler (jQuery API)
+    $(document).ajaxError(function (event, request, settings) {
+      ga(
+              'send',
+              'event',
+              'jQuery Ajax Error',
+              settings.url,
+              JSON.stringify({
+                result: event.result,
+                status: request.status,
+                statusText: request.statusText,
+                crossDomain: settings.crossDomain,
+                dataType: settings.dataType
+              }),
+              0,
+              true
+      );
+    });
+  </script>
+  <!-- End Google Analytics -->
+</head>
+
+
+<!-- BEGIN: BODY -->
+<body class="home page gamekulture" style=''>
+
+<div class="small-12 columns" id="gkflashstatus">
+  <script>
+    if (typeof($) !== "undefined") {
+      $("div.success.flash").delay("3000").fadeOut("1500");
+    }
+  </script>
+
+  <!-- Note this alert box is a template that can be used for updating a user a message via JS event -->
+  <div class="alert flash notice alert-info body_copy box_padding alert-box success" id="template-msg" style="display: none;">
+    <a href="#" class="close">×</a>
+  </div>
+
+
+
+</div>
+
+<!-- HEADER TYPE OPTIONS: "style1", "style2", "style3", "style4" -->
+<div id="headerStyleType" class="zap_helper_div">style3</div>
+<!-- FOR HIGH RESOLUTION IMAGES USED THIS IMG TAG
+<img src="low-res.png" media="only screen and (min-device-pixel-ratio: 2) then (src=high-res.png)"/>
+-->
+<!-- LOADING PAGES | COMMENT the DIV "loading-pages" IF YOU DON'T WANT TO USE IT -->
+<div class="loading-pages"></div>
+
+<!-- BEGIN: TOP PANEL -->
+<!-- BEGIN: TOP PANEL -->
+<div id="toppanel">
+  <div class="toppanel_content">
+    <div class="container content">
+
+
+      <!-- BEGIN: ONE-THIRD COLUMN -->
+      <div class="one-third column">
+
+        <br>
+      </div>
+      <!-- END -->
+
+      <!-- BEGIN: ONE-THIRD COLUMN -->
+      <div class="one-third column">
+        <br>
+      </div>
+      <!-- END -->
+
+      <!-- BEGIN: ONE-THIRD COLUMN -->
+      <div class="one-third column">
+
+      <br>
+
+      </div>
+      <!-- END -->
+
+
+
+    </div>
+
+  </div>
+
+</div>
+<!-- END -->
+
+<!-- END -->
+
+<!-- BEGIN: ALL CONTENT -->
+<div class="everything">
+  <!-- BEGIN: HEADER CONTAINER -->
+  <!-- BEGIN: HEADER CONTAINER -->
+  <div class="header_container headerstyle-style4" style="width:100%">
+    <!-- BEGIN: HEADER -->
+    <header class="container" id="header">
+      <div class="logo_and_menu">
+        <div class="logo columns" style="margin-top: 10px; margin-left: 0px;">
+          <h1>
+            <a href="/" tabindex="-1">
+              <img alt="GameKulture" class="logo_normal gk-logo notalone" src="//gamekulturprod.s3.amazonaws.com/assets/logos/logoGK-ffc2ef5f88bd161e92e0b16529f7643f.png" style="position: relative; margin-top: 22px;margin-bottom: 10px; margin-left: 0px;max-height:58px;" title="GameKulture" />
+              <img alt="GameKulture" class="logo_retina gk-logo" src="//gamekulturprod.s3.amazonaws.com/assets/logos/logoGK@2x-79e3168332c13bb9130afa22149fb1f0.png" style="display:none; margin-left: 0; max-height:58px" title="GameKulture" />
+            </a>
+          </h1>
+          <div class="slogan" style="background: none; font-size: 12px; color: #; margin-top: 34px;">A better way to find other gamers to play with.</div>
+        </div>
+        <div class="info_above_menu style4" style="margin-top: 36px;">
+          <div class="socialdiv" style="float:right;">
+            <ul>
+              <li><a class="facebook" href="https://www.facebook.com/GameKulture" target="_blank" title="Facebook"></a></li>
+              <li><a class="twitter" href="https://twitter.com/gamekulture" target="_blank" title="Twitter"></a></li>
+              <li><a class="instagram" href="https://instagram.com/gamekulture" target="_blank" title="Instagram"></a></li>
+              <li><a class="google" href="https://plus.google.com/102591957722691038883/about" target="_blank" title="Google"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-shadow" style='display:none;'></div>
+  </div>
+  <!-- END: HEADER CONTAINER -->
+  <!-- END: HEADER CONTAINER -->
+
+  <!-- BEGIN: ======================  CONTENT   ======================  CONTAINER -->
+  <div class="zap_content_wrapper">
+    <!-- BEGIN: REVOLUTION SLIDER
+NOTE: PLEASE READ THE REV SLIDER DOCUMENTATION TO LEARN HOW TO WORK WITH THE SLIDER
+-->
+    <div id="slider_container" style="margin-top: -23px;">
+
+      <!-- REVOLUTION SLIDER 3.0.2 fullwidth mode -->
+      <div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#f2f2f2;padding:0px;margin-top:0px;margin-bottom:0px;max-height:450px;">
+        <div id="rev_slider_2_1" class="rev_slider fullwidthabanner gk" style="display:none;max-height:450px;height:450;">
+          <ul>
+
+            <!-- BEGIN: SLIDE #01 -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="300" >
+
+              <!-- BACKGROUND IMAGE -->
+              <img alt="Landing_blue_back2" data-fullwidthcentering="on" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/landing_blue_back2-6bb50141076e619af0213b8a002efaa5.jpg" />
+
+
+              <!-- CAPTION #01-->
+              <div class="tp-caption sfb"
+                   data-x="439"
+                   data-y="12"
+                   data-speed="2300"
+                   data-start="500"
+                   data-easing="easeInOutBack">
+                <img alt="Warrior" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/warrior-6d05f1ea6bb881a22e396955cd7b42b4.jpg" />
+              </div>
+
+              <!-- CAPTION #02-->
+              <div class="tp-caption lfb"
+                   data-x="365"
+                   data-y="160"
+                   data-speed="1800"
+                   data-start="1200"
+                   data-easing="easeInOutQuint">
+                <img alt="Controllers_xboxone_ps4" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/controllers_xboxone_ps4-18a4065930eb471f8e7cc3408ead6a22.png" />
+              </div>
+
+              <!-- CAPTION #03-->
+              <div class="tp-caption sfb"
+                   data-x="973"
+                   data-y="143"
+                   data-speed="1300"
+                   data-start="1500"
+                   data-easing="easeInOutQuint">
+                <img alt="Blue_dice_clear" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/blue_dice_clear-68eef724e805d1d89a2fbf40850ba41d.png" />
+              </div>
+
+              <!-- CAPTION #04-->
+              <div class="tp-caption sfb"
+                   data-x="931"
+                   data-y="179"
+                   data-speed="1300"
+                   data-start="2000"
+                   data-easing="easeInOutQuint">
+                <img alt="Blue_dice_blur" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/blue_dice_blur-f8b080f04e9123475e1aff6a8323e01f.png" />
+              </div>
+
+              <!-- CAPTION #05-->
+              <div class="tp-caption big_white sfr"
+                   data-x="-2"
+                   data-y="64"
+                   data-speed="1300"
+                   data-start="2500"
+                   data-easing="easeOutExpo">
+                GameKulture
+              </div>
+
+              <!-- CAPTION #06-->
+              <div class="tp-caption big_white sfr" style="margin-top: 18px; margin-bottom: 20px;"
+                   data-x="-2"
+                   data-y="107"
+                   data-speed="1300"
+                   data-start="3200"
+                   data-easing="easeOutExpo">
+                <br/>A better way to find <br/>other gamers to play with.<br/>
+              </div>
+
+              <!-- CAPTION #07-->
+
+              <!-- CAPTION #08-->
+              <div class="tp-caption sfb" style="margin-top: 20px;"
+                   data-x="4"
+                   data-y="314"
+                   data-speed="1600"
+                   data-start="3900"
+                   data-easing="easeOutExpo">
+
+              </div>
+
+            </li>
+            <!-- END: SLIDE #01 -->
+
+            <!-- BEGIN: SLIDE #02 -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="300" >
+
+              <!-- BACKGROUND IMAGE -->
+              <img alt="Fortress_blur" data-fullwidthcentering="on" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/fortress_blur-8fab9180ca51237f222af87125ea2990.jpg" />
+
+              <!-- CAPTION #01 -->
+              <div class="tp-caption big_white sft"
+                   data-x="center" data-hoffset="0"
+                   data-y="95"
+                   data-speed="1800"
+                   data-start="500"
+                   data-easing="easeOutExpo">
+                Mobile <span class='df-color-font'> &amp;</span> Web
+              </div>
+
+              <!-- CAPTION #02 -->
+              <div class="tp-caption medium_white sft"
+                   data-x="center" data-hoffset="2"
+                   data-y="center" data-voffset="-12"
+                   data-speed="1400"
+                   data-start="1200"
+                   data-easing="easeOutExpo">
+                Let you're friends know what you're<br/> playing and see what they're playing<br/> all from your smart phone or tablet.
+              </div>
+
+              <!-- CAPTION #03 -->
+              <div class="tp-caption sft"
+                   data-x="56"
+                   data-y="194"
+                   data-speed="1300"
+                   data-start="2000"
+                   data-easing="easeInOutBack">
+                <img alt="Zap_black_iphone_angle_blur" src="//gamekulturprod.s3.amazonaws.com/assets/mobile/zap_black_iphone_angle_blur-15555d46c6371560ff37a661158d418d.png" />
+              </div>
+
+              <!-- CAPTION #04 -->
+              <div class="tp-caption sfb"
+                   data-x="718"
+                   data-y="199"
+                   data-speed="1300"
+                   data-start="2000"
+                   data-easing="easeInOutBack">
+                <img alt="Zap_iphone_angle" src="//gamekulturprod.s3.amazonaws.com/assets/mobile/zap_iphone_angle-750ad6347059af8202ef3a59d8793a07.png" />
+              </div>
+
+              <!-- CAPTION #05 -->
+              <div class="tp-caption sfb"
+                   data-x="450"
+                   data-y="252"
+                   data-speed="1400"
+                   data-start="2300"
+                   data-easing="easeOutExpo">
+
+              </div>
+              <!-- CAPTION #06 -->
+              <div class="tp-caption sfb" style="margin-top: 20px;"
+                   data-x="395"
+                   data-y="314"
+                   data-speed="1600"
+                   data-start="3900"
+                   data-easing="easeOutExpo">
+              </div>
+            </li>
+            <!-- END: SLIDE #02 -->
+
+            <!-- BEGIN: SLIDE #03 -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="300" >
+
+              <!-- BACKGROUND IMAGE -->
+              <img alt="bg3" data-fullwidthcentering="on" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/board_games-5cb362c9d473b30f79b6d29904fe9da2.jpg" />
+
+              <!-- CAPTION #01 -->
+              <div class="tp-caption sfr start"
+                   data-x="0"
+                   data-y="125"
+                   data-speed="900"
+                   data-start="1100"
+                   data-easing="easeOutExpo" style="z-index: 9;">
+                <img alt="Dice20clear" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/dice20clear-36fa61a84b24b7659e78a0282c949f9a.png" />
+              </div>
+
+              <!-- CAPTION #02 -->
+              <div class="tp-caption big_white sfr start"
+                   data-x="0"
+                   data-y="175"
+                   data-speed="900"
+                   data-start="1400"
+                   data-easing="easeOutExpo">
+                Board games, video games,<br/>mobile games, table top games.<br/>All games and gamers welcome.<br/>
+                <!-- <img src="/assets/img/preview_images/c-caption2.jpg" alt="Image 1"> -->
+              </div>
+
+              <!-- CAPTION #04 -->
+              <div class="tp-caption sfr"
+                   data-x="0"
+                   data-y="314"
+                   data-speed="1200"
+                   data-start="2000"
+                   data-easing="easeOutExpo">
+              </div>
+
+              <!-- CAPTION #05 -->
+              <div class="tp-caption lfb start"
+                   data-x="480"
+                   data-y="44"
+                   data-speed="600"
+                   data-start="800"
+                   data-easing="easeOutExpo">
+                <img alt="Board_game_play" src="//gamekulturprod.s3.amazonaws.com/assets/img/preview_images/gk/board_game_play-f4ab9469dcd7e50786bafdf29283b0f5.png" />
+              </div>
+
+            </li>
+
+
+            <!-- BEGIN: SLIDE #04 -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="300" >
+
+              <!-- BACKGROUND IMAGE -->
+              <img alt="Check_background_blur" data-fullwidthcentering="on" src="//gamekulturprod.s3.amazonaws.com/assets/zap/check_background_blur-9fbf3aa05e9843a496d783f77b9cac4a.jpg" />
+
+              <!-- CAPTION #01-->
+              <div class="tp-caption sfr"
+                   data-x="355"
+                   data-y="7"
+                   data-speed="1300"
+                   data-start="500"
+                   data-easing="easeOutExpo">
+                <img alt="Xboxone" src="//gamekulturprod.s3.amazonaws.com/assets/zap/xboxone-9efac9469eca80009a20221ba6edb398.png" />
+              </div>
+
+              <!-- CAPTION #02-->
+              <div class="tp-caption sfr"
+                   data-x="253"
+                   data-y="249"
+                   data-speed="1300"
+                   data-start="800"
+                   data-easing="easeOutExpo">
+                <img alt="Checkmarksearch" src="//gamekulturprod.s3.amazonaws.com/assets/zap/checkmarksearch-485e56f2730babd7b2e038fb9ef6ca8a.png" />
+              </div>
+
+              <!-- CAPTION #03-->
+              <div class="tp-caption big_white sfr"
+                   data-x="0"
+                   data-y="78"
+                   data-speed="1300"
+                   data-start="1100"
+                   data-easing="easeOutExpo">
+                Sign on. Check-in. That Simple.
+              </div>
+
+              <!-- CAPTION #04-->
+              <div class="tp-caption medium_white sfr"
+                   data-x="5"
+                   data-y="221"
+                   data-speed="1300"
+                   data-start="1400"
+                   data-easing="easeOutExpo">
+                Two easy steps and all you're friends that play<br/> will know you're playing too.
+              </div>
+
+              <!-- CAPTION #05-->
+              <div class="tp-caption lfr"
+                   data-x="3"
+                   data-y="276"
+                   data-speed="1300"
+                   data-start="1700"
+                   data-easing="easeOutExpo">
+              </div>
+            </li>
+            <!-- END: SLIDE #03 -->
+          </ul>
+          <!-- END: SLIDE #04 -->
+          <div class="tp-bannertimer tp-bottom"></div>
+        </div>
+      </div>
+
+
+
+      <script type="text/javascript">
+
+        var tpj=jQuery;
+
+
+        var revapi2;
+
+        tpj(document).ready(function() {
+
+          if (tpj.fn.cssOriginal != undefined)
+            tpj.fn.css = tpj.fn.cssOriginal;
+
+          revapi2 = tpj('#rev_slider_2_1').show().revolution({
+            delay:9000,
+            startwidth:1010,
+            startheight:450,
+            hideThumbs:200,
+
+            thumbWidth:100,
+            thumbHeight:50,
+            thumbAmount:4,
+
+            navigationType:"none",
+            navigationArrows:"solo",
+            navigationStyle:"round",
+
+            touchenabled:"on",
+            onHoverStop:"on",
+
+            navigationHAlign:"center",
+            navigationVAlign:"bottom",
+            navigationHOffset:0,
+            navigationVOffset:20,
+
+            soloArrowLeftHalign:"left",
+            soloArrowLeftValign:"center",
+            soloArrowLeftHOffset:0,
+            soloArrowLeftVOffset:0,
+
+            soloArrowRightHalign:"right",
+            soloArrowRightValign:"center",
+            soloArrowRightHOffset:0,
+            soloArrowRightVOffset:0,
+
+            shadow:0,
+            fullWidth:"on",
+            fullScreen:"off",
+
+            stopLoop:"off",
+            stopAfterLoops:-1,
+            stopAtSlide:-1,
+
+            shuffle:"off",
+
+            hideSliderAtLimit:0,
+            hideCaptionAtLimit:0,
+            hideAllCaptionAtLilmit:0,
+            startWithSlide:0,
+            videoJsPath:"http://designarethemes.com/themes/zapwp/wp-content/plugins/revslider/rs-plugin/videojs/",
+            fullScreenOffsetContainer: ""
+          });
+
+        });	//ready
+
+      </script>
+      <!-- END: REVOLUTION SLIDER -->
+
+    </div>
+    <!-- END: SLIDER CONTAINER DIV -->
+    <div class="white-space"></div>
+    <div id="learn-more"></div>
+    <!-- START: SIMPLE FULL SECTION -->
+    <div class="fullsection-color" style="background:#fdfdfd;margin-top:0;">
+      <div class="parallax-content container">
+        <!-- BEGIN: DONUTS CONTENT-->
+        <div class="container">
+          <div class="align-center">
+            <h2 style="margin-bottom: .5%; font-family: Open Sans; font-size: 29px; color: #545454;line-height: 1.2em;"><span style="font-weight:800;">GAMEKULTURE</span></h2>
+
+            <h2>Keep up with what games your friends are playing and tell them what you&#x27;re playing.</h2>
+            <br/><br/>
+          </div>
+          <div class="four columns">
+            <div class="home-donut-container">
+              <!-- FIRST DONUT -->
+              <div id="donuts-1" class="donuts">
+                <script type="text/javascript">
+                  jQuery(document).ready(function ($) {
+                    var color = '#63ACED';
+                    var opts = {
+                      lines: 12,
+                      angle: 0.5,
+                      lineWidth: 0.08,
+                      colorStart: color,
+                      colorStop: color,
+                      strokeColor: "#f5f5f5",
+                      generateGradient: false
+                    };
+                    window.gauge_1 = new Donut(document.getElementById("donut-1")).setOptions(opts);
+                    gauge_1.maxValue = 100;
+                    gauge_1.animationSpeed = 25;
+                  });
+                  jQuery(window).load(function () {
+                    if (isScrolledIntoView("donut-1")) {
+                      window.gauge_1.set(25);
+                      jQuery('#donut-1').removeClass('notinview')
+                    }
+                  });
+                  jQuery(window).scroll(function () {
+                    if (jQuery('#donut-1.notinview').length) {
+                      if (isScrolledIntoView("donut-1")) {
+                        window.gauge_1.set(25);
+                        jQuery('#donut-1').removeClass('notinview')
+                      }
+                    }
+                  });
+                </script>
+
+
+                <div class="donut-container">
+                  <canvas width="190" height="190" id="donut-1" class="notinview"></canvas>
+                  <div class="donut-content">
+                    <div class="middle">
+                      <div class="inner"><i class='fa fa-magic'></i>SIGN UP</div>
+                    </div>
+                  </div>
+
+                  <div class="text_container_fabig">
+                    <p class="item-desc">It takes just a few seconds.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="four columns">
+            <div class="home-donut-container">
+
+              <!-- SECOND DONUT -->
+              <div id="donuts-2" class="donuts">
+                <script type="text/javascript">
+                  jQuery(document).ready(function ($) {
+                    var color = '#63ACED';
+                    var opts = {
+                      lines: 12,
+                      angle: 0.5,
+                      lineWidth: 0.08,
+                      colorStart: color,
+                      colorStop: color,
+                      strokeColor: "#f5f5f5",
+                      generateGradient: false
+                    };
+                    window.gauge_2 = new Donut(document.getElementById("donut-2")).setOptions(opts);
+                    gauge_2.maxValue = 100;
+                    gauge_2.animationSpeed = 25;
+                  });
+                  jQuery(window).load(function () {
+                    if (isScrolledIntoView("donut-2")) {
+                      window.gauge_2.set(50);
+                      jQuery('#donut-2').removeClass('notinview')
+                    }
+                  });
+                  jQuery(window).scroll(function () {
+                    if (jQuery('#donut-2.notinview').length) {
+                      if (isScrolledIntoView("donut-2")) {
+                        window.gauge_2.set(50);
+                        jQuery('#donut-2').removeClass('notinview')
+                      }
+                    }
+                  });
+                </script>
+
+                <div class="donut-container">
+                  <canvas width="190" height="190" id="donut-2" class="notinview"></canvas>
+                  <div class="donut-content">
+                    <div class="middle">
+                      <div class="inner"><i class='fa fa-user'></i>PROFILE</div>
+                    </div>
+                  </div>
+
+                  <div class="text_container_fabig">
+                    <p class="item-desc">Build your profile and create your game library.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="four columns">
+            <div class="home-donut-container">
+              <!-- FOURTH DONUT -->
+              <div id="donuts-4" class="donuts">
+                <script type="text/javascript">
+                  jQuery(document).ready(function ($) {
+                    var color = '#63ACED';
+                    var opts = {
+                      lines: 12,
+                      angle: 0.5,
+                      lineWidth: 0.08,
+                      colorStart: color,
+                      colorStop: color,
+                      strokeColor: "#f5f5f5",
+                      generateGradient: false
+                    };
+                    window.gauge_4 = new Donut(document.getElementById("donut-4")).setOptions(opts);
+                    gauge_4.maxValue = 100;
+                    gauge_4.animationSpeed = 25;
+                  });
+                  jQuery(window).load(function () {
+                    if (isScrolledIntoView("donut-4")) {
+                      window.gauge_4.set(75);
+                      jQuery('#donut-4').removeClass('notinview')
+                    }
+                  });
+                  jQuery(window).scroll(function () {
+                    if (jQuery('#donut-4.notinview').length) {
+                      if (isScrolledIntoView("donut-4")) {
+                        window.gauge_4.set(75);
+                        jQuery('#donut-4').removeClass('notinview')
+                      }
+                    }
+                  });
+                </script>
+                <div class="donut-container">
+                  <canvas width="190" height="190" id="donut-4" class="notinview"></canvas>
+                  <div class="donut-content">
+                    <div class="middle">
+                      <div class="inner"><i class='fa fa-search'></i>FIND GAMERS</div>
+                    </div>
+                  </div>
+
+
+                  <div class="text_container_fabig">
+                    <p class="item-desc">Find or invite gamers who play the games you do.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="four columns">
+            <div class="home-donut-container">
+              <!-- THIRD DONUT -->
+              <div id="donuts-3" class="donuts">
+                <script type="text/javascript">
+                  jQuery(document).ready(function ($) {
+                    var color = '#63ACED';
+                    var opts = {
+                      lines: 12,
+                      angle: 0.5,
+                      lineWidth: 0.08,
+                      colorStart: color,
+                      colorStop: color,
+                      strokeColor: "#f5f5f5",
+                      generateGradient: false
+                    };
+                    window.gauge_3 = new Donut(document.getElementById("donut-3")).setOptions(opts);
+                    gauge_3.maxValue = 100;
+                    gauge_3.animationSpeed = 25;
+                  });
+                  jQuery(window).load(function () {
+                    if (isScrolledIntoView("donut-3")) {
+                      window.gauge_3.set(100);
+                      jQuery('#donut-3').removeClass('notinview')
+                    }
+                  });
+                  jQuery(window).scroll(function () {
+                    if (jQuery('#donut-3.notinview').length) {
+                      if (isScrolledIntoView("donut-3")) {
+                        window.gauge_3.set(100);
+                        jQuery('#donut-3').removeClass('notinview')
+                      }
+                    }
+                  });
+                </script>
+                <div class="donut-container">
+                  <canvas width="190" height="190" id="donut-3" class="notinview"></canvas>
+                  <div class="donut-content">
+                    <div class="middle">
+                      <div class="inner"><i class='fa fa-check-square-o'></i>CHECK-IN</div>
+                    </div>
+                  </div>
+
+                  <div class="text_container_fabig">
+                    <p class="item-desc">Check into games to send a notification that you&#x27;re playing.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+            <h4>GameKulture.com is still in redevelopment and is expected to launch again after the new year. Stay up to date
+                on the progress by joining our newsletter below.</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="white-space"></div>
+      <!-- BEGIN: MAIL CHIMP CONTAINER -->
+      <div class="mail_chimp_form_container">
+          <div class="white_content_arrow">seta</div>
+          <div class="mail-box">
+              <div class="container mail-news">
+                  <div class="news-l">
+                      <div class="banner">
+                          Join our Newsletter
+                      </div>
+
+                      <div class="form">
+
+                          <!-- Begin MailChimp Signup Form -->
+                          <div id="mc_embed_signup">
+                              <form action="//gamekulture.us12.list-manage.com/subscribe/post?u=f7c79afb580d968934ea22a15&amp;id=703123b858" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                  <div id="mc_embed_signup_scroll">
+                                      <h2>Subscribe to our mailing list</h2>
+                                      <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                                      <div class="mc-field-group">
+                                          <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                                          </label>
+                                          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                                      </div>
+                                      <div id="mce-responses" class="clear">
+                                          <div class="response" id="mce-error-response" style="display:none"></div>
+                                          <div class="response" id="mce-success-response" style="display:none"></div>
+                                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_f7c79afb580d968934ea22a15_703123b858" tabindex="-1" value=""></div>
+                                      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                  </div>
+                              </form>
+                          </div>
+
+                          <!--End mc_embed_signup-->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- END: MAIL CHIMP CONTAINER -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: MAIL CHIMP CONTAINER -->
+
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+
+        $('input.button.external-invite').click(function() {
+
+          var emailValue = $('#mce-EMAIL').val();
+
+          window.location.href = "mailto:" + emailValue + "?bcc=support@gamekulture.com&subject=You%20been%20invited%20to%20GameKulture%2Ecom&body=Hi%2C%0D%0DCongratulations%20you%27ve%20been%20invited%20to%20GameKulture%2Ecom%2E%20GK%20is%20a%20service%20that%20helps%20you%20connect%20with%20other%20gamers%20and%20game%20enthusiasts%2C%20share%20everything%20having%20to%20do%20with%20gaming%20and%20find%20other%20users%20to%20play%20with%2E%0D%0DTo%20join%20me%20there%2C%20simply%20visit%20http%3A//www%2Egamekulture%2Ecom%20it%27s%20Free%21%0D%0DThanks%20and%20Game%20On%21%21";
+        });
+
+      });
+    </script>
+
+    <script type="text/javascript">
+      $("p.success").delay("5000").fadeOut("400");
+      $("div.success").delay("5000").fadeOut("400");
+    </script>
+  </div>
+  <!-- END: ========================= CONTENT   ======================  CONTAINER -->
+
+  <!-- BEGIN: FOOTER -->
+  <!-- BEGIN: FOOTER -->
+  <div id="big_footer" style="overflow-x: hidden">
+    <div id="tweet_scroll_place">
+      <div class="container tweet_bird">
+        <div class="tweet_scroll_text sixteen columns"></div>
+      </div>
+    </div>
+
+    <!-- BEGIN: FOOTER WIDGETS -->
+    <div id="footer_content">
+      <div class="container">
+        <!-- BEGIN: RECENT POST WIDGETS -->
+        <div class="four columns">
+          <div id="recentPostsSidebar_widget">
+            <h2>GameKulture Features</h2>
+            <ul class="recentposts_listing">
+              <!-- RECENT POST #01 -->
+              <li>
+                <!-- Post type -->
+                <div class="recentPostsSidebar"><i class="fa fa-exclamation fa-2x" style="margin-left: 10px"></i></div>
+                <!-- Post Content -->
+                <div class="rc-container">
+                  Receive notifications that your friends are playing.
+                </div>
+              </li>
+
+              <!-- RECENT POST #02 -->
+              <li>
+                <!-- Post type -->
+                <div class="recentPostsSidebar"><i class="fa fa-search fa-2x"></i></div>
+                <!-- Post Content -->
+                <div class="rc-container">
+                  Find new gamers that play your games.
+
+                </div>
+              </li>
+
+              <!-- RECENT POST #03 -->
+              <li>
+                <!-- Post type -->
+                <div class="recentPostsSidebar"><i class="fa fa-book fa-2x"></i></div>
+                <!-- Post Content -->
+                <div class="rc-container">
+                  Thousands of game articles.
+                </div>
+              </li>
+
+              <!-- RECENT POST #04 -->
+              <li>
+                <!-- Post type -->
+                <div class="recentPostsSidebar"><i class="fa fa-gamepad fa-2x"></i></div>
+                <!-- Post Content -->
+                <div class="rc-container">
+                  Tens of thousands of games.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end: RECENT POST WIDGETS -->
+
+        <!-- BEGIN: IPHONE -->
+        <div class="four columns">
+          <h4 class="download-app">iOS</h4><hr/>
+          <div class="gamekulture textwidget">
+            <div>
+              <img alt="Iphone_white_download" src="//gamekulturprod.s3.amazonaws.com/assets/mobile/iphone_white_download-a1e04642c25cc9b2c14b8b59c2888cf5.png" />
+            </div>
+            <div class="gamekulture app-download">
+              Coming Soon...
+            </div>
+          </div>
+        </div>
+
+        <!-- BEGIN: ZAP CORE SERVICES -->
+        <div class="four columns">
+          <h4 class="download-app">Android</h4><hr/>
+          <div class="gamekulture textwidget">
+            <div>
+              <img alt="Android_phone_galaxys4_black_download" src="//gamekulturprod.s3.amazonaws.com/assets/mobile/android_phone_galaxys4_black_download-9c75e932bf9954bd31e3e72c5d43c76a.png" />
+            </div>
+            <div class="gamekulture app-download">
+              Coming Soon...
+            </div>
+          </div>
+        </div>
+
+        <!-- BEGIN: TWITTER WIDGET -->
+        <div class="four columns">
+          <div class="twitter_container">
+            <div id="twitter_update_list">
+              <a class="twitter-timeline" width="280" height="318" href="https://twitter.com/gamekulture" data-widget-id="528756814125338624">Tweets by @gamekulture</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+          </div>
+        </div>
+        <!-- END: TWITTER WIDGET -->
+      </div>
+    </div>
+    <!-- END: FOOTER -->
+
+    <!-- BEGIN: SECONDARY FOOTER -->
+    <div class="copys">
+      <div class="container">
+        <!-- BEGIN: SECONDARY FOOTER LEFT -->
+        <div class="copys_left eight columns">
+          &#169; 2015 GameKultur, Inc. - All rights Reserved
+          <!-- BEGIN: FOOTER MENU -->
+          <ul>
+            <li>
+              <a href="/" class="new_landing_link">Home</a>
+            </li>
+            <li><a href="privacy_policy.html" class="new_landing_link">Privacy Policy</a></li>
+            <li><a href="terms_of_service.html" class="new_landing_link">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- BEGIN: SECONDARY FOOTER RIGHT -->
+        <div class="copys_right eight columns">
+          <div class="footer_right_content">
+            <!-- BEGIN: FOOTER SOCIAL ICONS -->
+            <div class="socialdiv" style="float:right;">
+              <ul>
+                <li><a href="https://www.facebook.com/GameKulture" target="_blank" class="facebook" title="Facebook"></a></li>
+                <li><a href="https://twitter.com/gamekulture" target="_blank" class="twitter" title="Twitter"></a></li>
+                <li><a href="https://instagram.com/gamekulture" target="_blank" class="instagram" title="Instagram"></a></li>
+                <li><a href="https://plus.google.com/102591957722691038883/about" target="_blank" class="google" title="Google Plus"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: SECONDARY FOOTER -->
+  </div>
+  <!-- END -->
+</div>
+<!-- END: ALL CONTENT -->
+<!-- END -->
+</body>
+</html>

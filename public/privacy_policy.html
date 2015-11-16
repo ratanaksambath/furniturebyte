@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" xmlns:fb="http://ogp.me/ns/fb#"><!--<![endif]-->
+
+<head>
+  <!-- CONTENT-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35c53b4807","applicationID":"3987244","transactionName":"IF0PRxdYWw0DFxgKDQ5XTloLU1IZ","queueTime":0,"applicationTime":143,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-686.min.js"}</script>
+  <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgEEU1VRGwAJXFZQAwU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=n(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c>f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document;t(2);var f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+  <meta name="keywords" content="Gaming, Games, XBOX, PlayStation, Wii, Table Top, Table Top Games, RPG, Role-playing, Role-playing Games, Board Games, Mobile, Mobile Games, War Games, Miniatures, Miniatures Games, GameKulture.com">
+  <meta name="description" content="GameKulture.com, a better way to find other gamers to play with."/>
+  <meta name="author" content="GameKultur, Inc." />
+  <meta name="copyright" content="GameKultur, Inc. Copyright (c) 2015" />
+  <meta property="og:site_name" content="GameKulture.com"/>
+  <meta content="noodp,noydir" name="robots"/>
+  <meta property="fb:app_id" content="1403661493190119" />
+  <meta property="fb:page_id" content="461182603926316" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="@gamekulture"/>
+  <meta property="twitter:creator" content="@gamekulture"/>
+  <meta property="og:title" content="GameKulture.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.gamekulture.com"/>
+  <meta property="og:description" content="GameKulture.com, a better way to find other gamers to play with."/>
+  <meta property="og:image" content="https://www.gamekulture.com/images/gk_icon.jpg"/>
+  <meta property="twitter:title" content="GameKulture.com"/>
+  <meta property="twitter:description" content="GameKulture.com, a better way to find other gamers to play with."/>
+  <meta property="twitter:image:src" content="https://www.gamekulture.com/images/gk_icon.jpg"/>
+  <meta name="apple-itunes-app" content="app-id=808325918">
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="on/8/ng25xTWdgnDe2b47lFrmXbmDa0IzBbKqUGe6W4=" name="csrf-token" />
+  <title>GameKulture</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="#">
+  <link rel="apple-touch-icon" sizes="72x72" href="#">
+  <link rel="apple-touch-icon" sizes="114x114" href="#">
+  <link rel="apple-touch-icon" sizes="144x144" href="#">
+
+  <!-- CSS -->
+  <link href="//gamekulturprod.s3.amazonaws.com/assets/application-07fc44c72ebce763e2000007c91b606a.css" media="screen" rel="stylesheet" type="text/css" />
+  <!-- END -->
+
+  <!-- Javascript -->
+  <script src="//gamekulturprod.s3.amazonaws.com/assets/application-e4ce57e8cf1b7b16ce11f1b06eafd83b.js" type="text/javascript"></script>
+  <!-- END -->
+
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="on/8/ng25xTWdgnDe2b47lFrmXbmDa0IzBbKqUGe6W4=" name="csrf-token" />
+  <title>GameKulture.com | Where gaming isn't a hobby, it's a kulture.</title>
+
+
+  <!--[if gte IE 9]>
+  <style type="text/css">
+    .header-wrap {
+      filter: none !important;
+    }
+  </style>
+  <![endif]-->
+
+  <script>
+  </script>
+
+
+  <!-- Google Analytics -->
+  <script async src='//www.google-analytics.com/analytics.js'></script>
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    ga('create', 'UA-60027242-1', {useBeacon: true});
+
+    ga('send', 'pageview');
+
+    (function ($) {
+      // Log all jQuery AJAX requests to Google Analytics
+      $(document).ajaxSend(function(event, xhr, settings){
+        ga('send','pageview',settings.url.pathname);
+      });
+    })(jQuery);
+
+    // Pure JavaScript errors handler
+    window.addEventListener('error', function (err) {
+      var lineAndColumnInfo = err.colno ? ' line:' + err.lineno +', column:'+ err.colno : ' line:' + err.lineno;
+      ga(
+              'send',
+              'event',
+              'JavaScript Error',
+              err.message,
+              err.filename + lineAndColumnInfo + ' -> ' +  navigator.userAgent,
+              0,
+              true
+      );
+    });
+
+    // jQuery errors handler (jQuery API)
+    jQuery.error = function (message) {
+      ga(
+              'send',
+              'event',
+              'jQuery Error',
+              message,
+              navigator.userAgent,
+              0,
+              true
+      );
+    }
+
+    // jQuery AJAX errors handler (jQuery API)
+    $(document).ajaxError(function (event, request, settings) {
+      ga(
+              'send',
+              'event',
+              'jQuery Ajax Error',
+              settings.url,
+              JSON.stringify({
+                result: event.result,
+                status: request.status,
+                statusText: request.statusText,
+                crossDomain: settings.crossDomain,
+                dataType: settings.dataType
+              }),
+              0,
+              true
+      );
+    });
+  </script>
+  <!-- End Google Analytics -->
+</head>
+
+
+<!-- BEGIN: BODY -->
+<body class="home page gamekulture" style=''>
+
+<div class="small-12 columns" id="gkflashstatus">
+  <script>
+    if (typeof($) !== "undefined") {
+      $("div.success.flash").delay("3000").fadeOut("1500");
+    }
+  </script>
+
+  <!-- Note this alert box is a template that can be used for updating a user a message via JS event -->
+  <div class="alert flash notice alert-info body_copy box_padding alert-box success" id="template-msg" style="display: none;">
+    <a href="#" class="close">×</a>
+  </div>
+
+
+
+</div>
+
+<!-- HEADER TYPE OPTIONS: "style1", "style2", "style3", "style4" -->
+<div id="headerStyleType" class="zap_helper_div">style3</div>
+<!-- FOR HIGH RESOLUTION IMAGES USED THIS IMG TAG
+<img src="low-res.png" media="only screen and (min-device-pixel-ratio: 2) then (src=high-res.png)"/>
+-->
+<!-- LOADING PAGES | COMMENT the DIV "loading-pages" IF YOU DON'T WANT TO USE IT -->
+<div class="loading-pages"></div>
+
+<!-- BEGIN: TOP PANEL -->
+<!-- BEGIN: TOP PANEL -->
+<div id="toppanel">
+  <div class="toppanel_content">
+    <div class="container content">
+
+
+      <!-- BEGIN: ONE-THIRD COLUMN -->
+      <div class="one-third column">
+
+        <br>
+      </div>
+      <!-- END -->
+
+      <!-- BEGIN: ONE-THIRD COLUMN -->
+      <div class="one-third column">
+        <br>
+      </div>
+      <!-- END -->
+
+      <!-- BEGIN: ONE-THIRD COLUMN -->
+      <div class="one-third column">
+
+      <br>
+
+      </div>
+      <!-- END -->
+
+
+
+    </div>
+
+  </div>
+
+</div>
+<!-- END -->
+
+<!-- END -->
+
+
+        <!-- BEGIN: ALL CONTENT -->
+        <div class="everything">
+            <!-- BEGIN: HEADER CONTAINER -->
+            <!-- BEGIN: HEADER CONTAINER -->
+<div class="header_container headerstyle-style4" style="width:100%">
+	<!-- BEGIN: HEADER -->
+	<header class="container" id="header">
+        <div class="logo_and_menu">
+            <div class="logo columns" style="margin-top: 10px; margin-left: 0px;">
+                <h1>
+                    <a href="/" tabindex="-1">
+                      <img alt="GameKulture" class="logo_normal gk-logo notalone" src="//gamekulturprod.s3.amazonaws.com/assets/logos/logoGK-ffc2ef5f88bd161e92e0b16529f7643f.png" style="position: relative; margin-top: 22px;margin-bottom: 10px; margin-left: 0px;max-height:58px;" title="GameKulture" />
+                      <img alt="GameKulture" class="logo_retina gk-logo" src="//gamekulturprod.s3.amazonaws.com/assets/logos/logoGK@2x-79e3168332c13bb9130afa22149fb1f0.png" style="display:none; margin-left: 0; max-height:58px" title="GameKulture" />
+                    </a>
+                </h1>
+                <div class="slogan" style="background: none; font-size: 12px; color: #; margin-top: 34px;">A better way to find other gamers to play with.</div>
+            </div>
+            <div class="info_above_menu style4" style="margin-top: 36px;">
+                <div class="socialdiv" style="float:right;">
+                    <ul>
+                        <li><a class="facebook" href="https://www.facebook.com/GameKulture" target="_blank" title="Facebook"></a></li>
+                        <li><a class="twitter" href="https://twitter.com/gamekulture" target="_blank" title="Twitter"></a></li>
+                        <li><a class="instagram" href="https://instagram.com/gamekulture" target="_blank" title="Instagram"></a></li>
+                        <li><a class="google" href="https://plus.google.com/102591957722691038883/about" target="_blank" title="Google"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-shadow" style='display:none;'></div>
+</div>
+<!-- END: HEADER CONTAINER -->
+            <!-- END: HEADER CONTAINER -->
+
+            <!-- BEGIN: ======================  CONTENT   ======================  CONTAINER -->
+            <div class="zap_content_wrapper">
+                <!-- Begin Page Title : center title + image-->
+<!-- START: PARALLAX #01 -->
+<div id="parallax-1" class="parallax" style="background-image: url(/assets/backgrounds/wow3.jpg); height: 250px;">
+<div class="parallax-overlay parallax-overlay-pattern" style="height: 250px;"></div>
+
+<div class="parallax-content container fullwidth-container image">
+<div class="quotes-section" style="margin: 80px 0;">
+  <div class="white-space"></div>
+  <div class="container">
+          <div class="pageTitle center sixteen columns offset-by-three columns">
+              <h1 class="page_title gk-title">Privacy Policy</h1>
+          </div>
+  </div>
+  <div class="white-space"></div>
+</div>
+</div>
+</div>
+<!-- END: PARALLAX #01 -->
+<!-- End Page Title -->
+
+<!-- START: FULL CONTENT -->
+<div class="entry-content gk-privacy-policy">
+    <div class="white-space"></div>
+    <div class="container">
+        <div class="sixteen columns">
+            <h2 class="zaptitle"><span>GameKulture.com Privacy Policy</span></h2>
+            <p>Last modified: January 1st, 2013</p><br/>
+
+            <p>There are many different ways you can use our site – to search for and share information on games, to communicate with other users or to create new content. When you share information with us, for example by creating a GameKulture.com account, we can make the site even better – to show you more relevant search results, to help you connect with users or to make sharing with others quicker and easier. As you use our site, we want you to be clear how we’re using information and the ways in which you can protect your privacy.</p><br/>
+            <p>Our Privacy Policy explains:</p>
+            <ul>
+                <li>What information we collect and why we collect it.</li>
+                <li>How we use that information.</li>
+                <li>The choices we offer, including how to access and update information.</li>
+            </ul><br/>
+            <p>We’ve tried to keep it as simple as possible, but if you’re not familiar with terms like cookies, IP addresses, pixel tags and browsers, then read about these key terms first. Your privacy matters to GameKultur, Inc. so whether you are new to GameKulture.com or a long-time user, please do take the time to get to know our practices – and if you have any questions contact us.</p><br/>
+
+            <p><b>Information we collect</b></p>
+            <p>We collect information to provide better services to all of our users – from figuring out basic stuff like which language you speak, to more complex things like which game suggestions you’ll find most useful or the users who matter most to you online.</p><br/>
+
+            <p><b>We collect information in two ways:</b></p>
+            <p>Information you give us - For example, our site requires you to sign up for a GameKulture.com account. When you do, we’ll ask for useral information, like your name, email address, telephone number or credit card. If you want to take full advantage of the sharing features we offer, we ask you to create a publicly visible GameKulture.com Profile, which may include your name and photo.</p><br/>
+            <p>Information we get from your use of our site - We may collect information about the features that you use and how you use them. This information includes:</p>
+            <ul>
+                <li>Device information</li>
+                <li>We may collect device-specific information (such as your hardware model, operating system version, unique device identifiers, and mobile network information including phone number). GameKultur, Inc. may associate your device identifiers or phone number with your GameKulture.com Account.</li>
+                <li>Log information</li>
+            </ul><br/>
+            <p>When you use our site or view content provided by GameKulture.com, we may automatically collect and store certain information in server logs. This may include:</p>
+            <ul>
+                <li>details of how you used our site, such as your search queries</li>
+                <li>Internet protocol address</li>
+                <li>device event information such as crashes, system activity, hardware settings, browser type, browser language, the date and time of your request and referral URL</li>
+                <li>cookies that may uniquely identify your browser or your GameKulture.com Account</li>
+                <li>Location information</li>
+            </ul><br/>
+            <p>When you use a location-enabled GameKulture.com feature, we may collect and process information about your actual location, like GPS signals sent by a mobile device. We may also use various technologies to determine location, such as sensor data from your device that may, for example, provide information on nearby Wi-Fi access points and cell towers.</p><br/>
+            <p><b>Unique application numbers</b> - Certain features or applications include a unique application number. This number and information about your installation (for example, the operating system type and application version number) may be sent to GameKultur, Inc. when you install or uninstall that feature/application or when that feature/application periodically contacts our servers, such as for automatic updates.</p><br/>
+            <p><b>Local storage</b> - We may collect and store information (including useral information) locally on your device using mechanisms such as browser web storage (including HTML 5) and application data caches.</p><br/>
+            <p><b>Cookies and anonymous identifiers</b> - We use various technologies to collect and store information when you visit GameKulture.com, and this may include sending one or more cookies or anonymous identifiers to your device.</p><br/>
+
+            <p><b>How we use information we collect</b></p>
+            <p>We use the information we collect from all of our services to provide, maintain, protect and improve them, to develop new ones, and to protect GameKultur, Inc. and our site’s users. We also use this information to offer you tailored content – like giving you more relevant search results and games suggestions.</p><br/>
+            <p>When you contact GameKultur, Inc., we may keep a record of your communication to help solve any issues you might be facing. We may use your email address to inform you about our services, such as letting you know about upcoming changes or improvements.</p><br/>
+            <p>We use information collected from cookies and other technologies, like pixel tags, to improve your user experience and the overall quality of our services. When showing you tailored information, we will not associate a cookie or anonymous identifier with sensitive categories, such as those based on race, religion, sexual orientation or health.</p><br/>
+            <p>We will ask for your consent before using information for a purpose other than those that are set out in this Privacy Policy. GameKultur, Inc. processes useral information on our servers in many countries around the world. We may process your useral information on a server located outside the country where you live.</p><br/>
+
+            <p><b>Transparency and choice</b></p>
+            <p>Users have different privacy concerns. Our goal is to be clear about what information we collect, so that you can make meaningful choices about how it is used. For example, you can:</p>
+            <ul>
+                <li>Review and control certain types of information tied to your GameKulture.com account.</li>
+                <li>View and edit your preferences, such as which categories might interest you.</li>
+                <li>Set your privacy setting and adjust how your GameKulture.com Profile appears to particular individuals.</li>
+                <li>Control who you share information with.</li>
+            </ul><br/>
+            <p>You may also set your browser to block all cookies, including cookies associated with our services, or to indicate when a cookie is being set by us. However, it’s important to remember that many of our features may not function properly if your cookies are disabled. For example, we may not remember your language preferences.</p><br/>
+
+            <p><b>Information you share</b></p>
+            <p>Our site lets you share information with others. Remember that when you share information publicly, it may be indexable by search engines, including GameKulture.com site search engine. Our site provides you with different options on sharing and removing your content.</p><br/>
+
+            <p><b>Accessing and updating your useral information</b></p>
+            <p>Whenever you use our site, we aim to provide you with access to your useral information. If that information is wrong, we strive to give you ways to update it quickly or to delete it – unless we have to keep that information for legitimate business or legal purposes. When updating your useral information, we may ask you to verify your identity before we can act on your request.</p><br/>
+            <p>We may reject requests that are unreasonably repetitive, require disproportionate technical effort (for example, developing a new system or fundamentally changing an existing practice), risk the privacy of others, or would be extremely impractical (for instance, requests concerning information residing on backup tapes).</p><br/>
+            <p>Where we can provide information access and correction, we will do so for free, except where it would require a disproportionate effort. We aim to maintain our site in a manner that protects information from accidental or malicious destruction. Because of this, after you delete information from our site, we may not immediately delete residual copies from our active servers and may not remove information from our backup systems.</p><br/>
+
+            <p><b>Information we share</b></p>
+            <p>We do not share useral information with companies, organizations and individuals outside of GameKultur, Inc. unless one of the following circumstances apply:</p>
+            <ul>
+                <li>With your consent - We will share useral information with companies, organizations or individuals outside of GameKultur, Inc. when we have your consent to do so. We require opt-in consent for the sharing of any sensitive useral information.</li>
+                <li>For external processing -  We provide useral information to our affiliates or other trusted businesses or users to process it for us, based on our instructions and in compliance with our Privacy Policy and any other appropriate confidentiality and security measures.</li>
+                <li>For legal reasons</li>
+            </ul><br/>
+            <p>We will share useral information with companies, organizations or individuals outside of GameKultur, Inc. if we have a good-faith belief that access, use, preservation or disclosure of the information is reasonably necessary to:</p>
+            <ul>
+                <li>meet any applicable law, regulation, legal process or enforceable governmental request</li>
+                <li>enforce applicable Terms of Service, including investigation of potential violations</li>
+                <li>detect, prevent, or otherwise address fraud, security or technical issues</li>
+                <li>protect against harm to the rights, property or safety of GameKultur, Inc., our users or the public as required or permitted by law</li>
+            </ul><br/>
+            <p>We may share aggregated, non-userally identifiable information publicly and with our partners – like publishers, advertisers or connected sites. For example, we may share information publicly to show trends about the general use of our services.</p><br/>
+            <p>If GameKultur, Inc. is involved in a merger, acquisition or asset sale, we will continue to ensure the confidentiality of any useral information and give affected users notice before useral information is transferred or becomes subject to a different privacy policy.</p><br/>
+
+            <p><b>Information security</b></p>
+            <p>We work hard to protect GameKultur, Inc. and our GameKulture.com users from unauthorized access to or unauthorized alteration, disclosure or destruction of information we hold. In particular:</p>
+            <ul>
+                <li>We encrypt many of our services using SSL.</li>
+                <li>We review our information collection, storage and processing practices, including physical security measures, to guard against unauthorized access to systems.</li>
+                <li>We restrict access to useral information to GameKultur, Inc. employees, contractors and agents who need to know that information in order to process it for us, and who are subject to strict contractual confidentiality obligations and may be disciplined or terminated if they fail to meet these obligations.</li>
+            </ul><br/>
+
+            <p><b>Application</b></p>
+            <p>Our Privacy Policy applies to all of the services offered by GameKultur Inc., but excludes services that have separate privacy policies that do not incorporate this Privacy Policy.</p><br/>
+            <p>Our Privacy Policy does not apply to services offered by other companies or individuals, including products or sites that may be displayed to you on our services or other sites linked from our services. Our Privacy Policy does not cover the information practices of other companies and organizations who advertise our services, and who may use cookies, pixel tags and other technologies to serve and offer relevant ads.</p><br/>
+
+            <p><b>Enforcement</b></p>
+            <p>We regularly review our compliance with our Privacy Policy. We also adhere to several self regulatory frameworks. When we receive formal written complaints, we will contact the user who made the complaint to follow up. We work with the appropriate regulatory authorities, including local data protection authorities, to resolve any complaints regarding the transfer of useral data that we cannot resolve with our users directly.</p><br/>
+
+            <p><b>Changes</b></p>
+            <p>Our Privacy Policy may change from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. We will post any privacy policy changes on this page and, if the changes are significant, we will provide a more prominent notice (including, for certain services, email notification of privacy policy changes). We will also keep prior versions of this Privacy Policy in an archive for your review.</p>
+        </div>
+    </div>
+    <div class="white-space"></div>
+    <div class="white-space"></div>
+</div>
+
+<script type="text/javascript">
+    $("p.success").delay("5000").fadeOut("400");
+    $("div.success").delay("5000").fadeOut("400");
+</script>
+            </div>
+            <!-- END: ========================= CONTENT   ======================  CONTAINER -->
+
+  <!-- BEGIN: FOOTER -->
+  <!-- BEGIN: FOOTER -->
+  <div id="big_footer" style="overflow-x: hidden">
+    <div id="tweet_scroll_place">
+      <div class="container tweet_bird">
+        <div class="tweet_scroll_text sixteen columns"></div>
+      </div>
+    </div>
+
+    <!-- BEGIN: FOOTER WIDGETS -->
+    <div id="footer_content">
+      <div class="container">
+        <!-- BEGIN: RECENT POST WIDGETS -->
+        <div class="four columns">
+          <div id="recentPostsSidebar_widget">
+            <h2>GameKulture Features</h2>
+            <ul class="recentposts_listing">
+              <!-- RECENT POST #01 -->
+              <li>
+                <!-- Post type -->
+                <div class="recentPostsSidebar"><i class="fa fa-exclamation fa-2x" style="margin-left: 10px"></i></div>
+                <!-- Post Content -->
+                <div class="rc-container">
+                  Receive notifications that your friends are playing.
+                </div>
+              </li>
+
+              <!-- RECENT POST #02 -->
+              <li>
+                <!-- Post type -->
+                <div class="recentPostsSidebar"><i class="fa fa-search fa-2x"></i></div>
+                <!-- Post Content -->
+                <div class="rc-container">
+                  Find new gamers that play your games.
+
+                </div>
+              </li>
+
+              <!-- RECENT POST #03 -->
+              <li>
+                <!-- Post type -->
+                <div class="recentPostsSidebar"><i class="fa fa-book fa-2x"></i></div>
+                <!-- Post Content -->
+                <div class="rc-container">
+                  Thousands of game articles.
+                </div>
+              </li>
+
+              <!-- RECENT POST #04 -->
+              <li>
+                <!-- Post type -->
+                <div class="recentPostsSidebar"><i class="fa fa-gamepad fa-2x"></i></div>
+                <!-- Post Content -->
+                <div class="rc-container">
+                  Tens of thousands of games.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end: RECENT POST WIDGETS -->
+
+        <!-- BEGIN: IPHONE -->
+        <div class="four columns">
+          <h4 class="download-app">iOS</h4><hr/>
+          <div class="gamekulture textwidget">
+            <div>
+              <img alt="Iphone_white_download" src="//gamekulturprod.s3.amazonaws.com/assets/mobile/iphone_white_download-a1e04642c25cc9b2c14b8b59c2888cf5.png" />
+            </div>
+            <div class="gamekulture app-download">
+              Coming Soon...
+            </div>
+          </div>
+        </div>
+
+        <!-- BEGIN: ZAP CORE SERVICES -->
+        <div class="four columns">
+          <h4 class="download-app">Android</h4><hr/>
+          <div class="gamekulture textwidget">
+            <div>
+              <img alt="Android_phone_galaxys4_black_download" src="//gamekulturprod.s3.amazonaws.com/assets/mobile/android_phone_galaxys4_black_download-9c75e932bf9954bd31e3e72c5d43c76a.png" />
+            </div>
+            <div class="gamekulture app-download">
+              Coming Soon...
+            </div>
+          </div>
+        </div>
+
+        <!-- BEGIN: TWITTER WIDGET -->
+        <div class="four columns">
+          <div class="twitter_container">
+            <div id="twitter_update_list">
+              <a class="twitter-timeline" width="280" height="318" href="https://twitter.com/gamekulture" data-widget-id="528756814125338624">Tweets by @gamekulture</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+          </div>
+        </div>
+        <!-- END: TWITTER WIDGET -->
+      </div>
+    </div>
+    <!-- END: FOOTER -->
+
+    <!-- BEGIN: SECONDARY FOOTER -->
+    <div class="copys">
+      <div class="container">
+        <!-- BEGIN: SECONDARY FOOTER LEFT -->
+        <div class="copys_left eight columns">
+          &#169; 2015 GameKultur, Inc. - All rights Reserved
+          <!-- BEGIN: FOOTER MENU -->
+          <ul>
+            <li>
+              <a href="/" class="new_landing_link">Home</a>
+            </li>
+            <li><a href="privacy_policy.html" class="new_landing_link">Privacy Policy</a></li>
+            <li><a href="terms_of_service.html" class="new_landing_link">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- BEGIN: SECONDARY FOOTER RIGHT -->
+        <div class="copys_right eight columns">
+          <div class="footer_right_content">
+            <!-- BEGIN: FOOTER SOCIAL ICONS -->
+            <div class="socialdiv" style="float:right;">
+              <ul>
+                <li><a href="https://www.facebook.com/GameKulture" target="_blank" class="facebook" title="Facebook"></a></li>
+                <li><a href="https://twitter.com/gamekulture" target="_blank" class="twitter" title="Twitter"></a></li>
+                <li><a href="https://instagram.com/gamekulture" target="_blank" class="instagram" title="Instagram"></a></li>
+                <li><a href="https://plus.google.com/102591957722691038883/about" target="_blank" class="google" title="Google Plus"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: SECONDARY FOOTER -->
+  </div>
+  <!-- END -->
+</div>
+<!-- END: ALL CONTENT -->
+<!-- END -->
+</body>
+</html>
