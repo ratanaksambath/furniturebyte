@@ -12,11 +12,11 @@ deployment:
     commands:
       - sudo rm -R node_modules && sudo rm -R spec && sudo rm package.json
       - parse deploy furniturebyte
-  staging: # gamekulturedev Parse project
+  staging: # furniturebytedev Parse project
     branch: develop
     commands:
       - sudo rm -R node_modules && sudo rm -R spec && sudo rm package.json
-      - parse deploy gamekulturedev
+      - parse deploy furniturebytedev
 machine:
   node:
     version: 4.1.0
