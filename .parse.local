@@ -1,0 +1,13 @@
+{
+  "applications": {
+    "_default": {
+      "link": "furniturebyte"
+    },
+    "furniturebyte": {
+      "applicationId": "Km4x5fCYYMmhi2Nf3zHRSSl3hpcDjP5JQEXYwpgj"
+    },
+    "furniturebytedev": {
+          "applicationId": "TOlCExybn6HiICrSn2WQrSphikDwGF6fpzxaGJvJ"
+    }
+  }
+}
